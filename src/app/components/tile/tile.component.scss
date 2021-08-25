@@ -1,0 +1,16 @@
+.isl-tile {
+  background-color: #56a7cc;
+  border-right: 1px solid #417f9c;
+  border-bottom: 1px solid #417f9c;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  &:hover {
+    background-color: #44beeb;
+    transition: all 0.12s;
+  }
+  &--land {
+    background-color: #9c6e54;
+  }
+}

@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand&display=swap');
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.retro-font {
+  font-family: 'Press Start 2P', cursive;
+}

@@ -1,0 +1,18 @@
+<div class="isl-grid">
+  <ng-container *ngIf="grid">
+    <p>
+      Click on the tiles to toggle between land and sea to create your tiny world
+    </p>
+    <div class="isl-grid__row"
+         *ngFor="let row of grid; let i = index">
+      <ng-container *ngFor="let tile of row; let j = index">
+        <div class="isl-grid__tile">
+          <isl-tile [tile]="tile"
+                    (tileToggle)="onTileToggle($event)"
+                    [coordinates]="{ x: j, y: i }">
+          </isl-tile>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

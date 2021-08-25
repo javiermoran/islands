@@ -1,0 +1,21 @@
+:host {
+  width: 60vh;
+  height: 60vh;
+}
+.isl-grid {
+  display: flex;
+  flex-direction: column;
+  &__row {
+    display: flex;
+    flex: 1;
+  }
+  &__tile {
+    flex: 1;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}
