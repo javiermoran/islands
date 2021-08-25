@@ -9,8 +9,8 @@ import { IslandsService } from 'src/app/services/islands.service';
 })
 export class ControlsComponent implements OnInit {
   public controlsForm = new FormGroup({
-    rows: new FormControl(30, [Validators.required, Validators.min(1)]),
-    cols: new FormControl(30, [Validators.required, Validators.min(1)]),
+    rows: new FormControl(20, [Validators.required, Validators.min(1)]),
+    cols: new FormControl(20, [Validators.required, Validators.min(1)]),
   });
 
   constructor(private islandsService: IslandsService) {}

@@ -1,16 +1,23 @@
+@import '../../scss/variables';
+
 .isl-tile {
-  background-color: #56a7cc;
-  border-right: 1px solid #417f9c;
-  border-bottom: 1px solid #417f9c;
+  background-color: $water-dark-color;
+  border-right: 1px solid $water-border-color;
+  border-bottom: 1px solid $water-border-color;
   cursor: pointer;
   height: 100%;
   position: absolute;
   width: 100%;
   &:hover {
-    background-color: #44beeb;
+    background-color: $water-color;
     transition: all 0.12s;
   }
   &--land {
-    background-color: #9c6e54;
+    background-color: $land-color;
+    border-right: 1px solid $land-color;
+    border-bottom: 1px solid $land-color;
+    &:hover {
+      background: $land-light-color;
+    }
   }
 }

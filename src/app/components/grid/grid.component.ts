@@ -27,7 +27,7 @@ export class GridComponent implements OnInit, OnDestroy {
   onTileToggle(event: { tile?: Tile; coordinates?: Coordinates }) {
     const { tile, coordinates } = event;
     if (this.grid && tile && coordinates) {
-      this.grid[coordinates?.x][coordinates?.y] = tile;
+      this.grid[coordinates?.y][coordinates?.x] = tile;
       this.islandsService.updateGrid(this.grid);
     }
   }
