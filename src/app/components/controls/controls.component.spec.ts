@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { IslandsService } from 'src/app/services/islands.service';
 
 import { ControlsComponent } from './controls.component';
+
+const IslandsServiceMock = {
+  generateGrid: () => null,
+};
 
 describe('ControlsComponent', () => {
   let component: ControlsComponent;
@@ -8,9 +13,9 @@ describe('ControlsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ControlsComponent ]
-    })
-    .compileComponents();
+      declarations: [ControlsComponent],
+      providers: [{ provide: IslandsService, useValue: IslandsServiceMock }],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +26,19 @@ describe('ControlsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create controlsForm', () => {
+    expect(component.controlsForm).toBeDefined();
+    expect(component.controlsForm.get('rows')).toBeDefined();
+    expect(component.controlsForm.get('cols')).toBeDefined();
+  });
+
+  describe('onGenerateWorld()', () => {
+    it('should call islandsService.generateGrid()', () => {
+      const generateGridSpy = spyOn(component.islandsService, 'generateGrid');
+      component.onGenerateWorld();
+      expect(generateGridSpy).toHaveBeenCalledWith(20, 20);
+    });
   });
 });
