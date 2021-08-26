@@ -1,27 +1,60 @@
-# Islands
+# Tiny Islands World
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+This project is an angular application that lets the user create a small sea world represented by a grid in which the user can toggle the tiles between sea / land to create islands. The user is presented with information of how many land tiles and islands there are in this sea world. The user can also choose the size of the grid.
+\
+&nbsp;
+
+## Installation
+
+Run the installation command to install all needed dependencies:
+
+`npm install`
+\
+&nbsp;
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4201/`. The app will automatically reload if you change any of the source files.
+\
+&nbsp;
 
-## Code scaffolding
+## Project structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Components
 
-## Build
+#### _Controls_:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This component handles the controls used to define the grid size.
 
-## Running unit tests
+#### _Grid_:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This component display the complete grid and works as a container for the tiles.
 
-## Running end-to-end tests
+#### _Summary_:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+This component shows the information about the sea world.
 
-## Further help
+#### _Tile_:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This component represent a single tile in the grid and handles the land / sea toggle.
+
+### Services
+
+#### _IslandsService_:
+
+This service is where all the logic happens, grid generation, information calculations and controls components interactions.
+
+### Interfaces
+
+This folder is where all the interfaces used in the app are stored.
+
+\
+&nbsp;
+
+---
+
+**NOTES:**
+
+Some of the unit tests are still missing due lack of time but they will be added in the future.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
