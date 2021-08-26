@@ -13,7 +13,7 @@ export class ControlsComponent implements OnInit {
     cols: new FormControl(20, [Validators.required, Validators.min(1)]),
   });
 
-  constructor(private islandsService: IslandsService) {}
+  constructor(public islandsService: IslandsService) {}
 
   ngOnInit(): void {}
 

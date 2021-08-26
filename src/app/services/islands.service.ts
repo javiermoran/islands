@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Tile, TILE_TYPE } from '../interfaces/Tile';
+import { Tile } from '../interfaces/Tile';
 import { v4 as uuidv4 } from 'uuid';
 import { GridData } from '../interfaces/GridData';
+import { TILE_TYPE } from '../interfaces/TileType';
 
 @Injectable({
   providedIn: 'root',

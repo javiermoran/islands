@@ -10,6 +10,14 @@
                    class="form-control text-center"
                    formControlName="rows"
                    placeholder="Rows">
+            <small class="form-text text-danger"
+                   *ngIf="controlsForm.controls['rows'].errors?.min">
+              Rows must be bigger than 0
+            </small>
+            <small class="form-text text-danger"
+                   *ngIf="controlsForm.controls['rows'].errors?.required">
+              Rows is required
+            </small>
           </div>
           <div class="form-group col-md-6 text-center">
             <label>Columns</label>
@@ -17,11 +25,20 @@
                    class="form-control text-center"
                    formControlName="cols"
                    placeholder="Columns">
+            <small class="form-text text-danger"
+                   *ngIf="controlsForm.controls['cols'].errors?.min">
+              Columns must be bigger than 0
+            </small>
+            <small class="form-text text-danger"
+                   *ngIf="controlsForm.controls['cols'].errors?.required">
+              Columns is required
+            </small>
           </div>
         </div>
         <div class="row">
           <div class="col-12 text-center mt-4 mb-2">
-            <button class="btn btn-primary retro-font">
+            <button class="btn btn-primary retro-font"
+                    [disabled]="controlsForm.invalid">
               Generate world!
             </button>
           </div>

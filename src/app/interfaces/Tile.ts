@@ -1,7 +1,4 @@
-export enum TILE_TYPE {
-  sea = 0,
-  land = 1,
-}
+import { TILE_TYPE } from './TileType';
 
 export interface Tile {
   id: string;

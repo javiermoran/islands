@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Coordinates } from 'src/app/interfaces/Coordinates';
-import { Tile, TILE_TYPE } from 'src/app/interfaces/Tile';
+import { Tile } from 'src/app/interfaces/Tile';
+import { TILE_TYPE } from 'src/app/interfaces/TileType';
 
 @Component({
   selector: 'isl-tile',
